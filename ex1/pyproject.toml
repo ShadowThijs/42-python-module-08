@@ -1,0 +1,12 @@
+[project]
+name = "Learning-packages"
+version = "0.0.1"
+description = "Using poetry and pip"
+requires-python = ">=3.10"
+dependencies = [
+    "requests",
+    "pandas",
+    "matplotlib",
+    "numpy"
+]
+package-mode = false
