@@ -37,7 +37,10 @@ def display_config(config: dict[str, str]) -> None:
 
     print("Database: ", end="")
     if is_dev:
-        print("Connected to local instance")
+        print(
+            "Connected to local instance:"
+            f" `{config['DATABASE_URL']}`"
+        )
     elif config["DATABASE_URL"]:
         print("Connected (connection string hidden)")
     else:
