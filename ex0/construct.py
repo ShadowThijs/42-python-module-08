@@ -4,8 +4,10 @@ import site
 
 executable: str = sys.executable
 
+
 def in_venv() -> bool:
     return sys.prefix != sys.base_prefix
+
 
 def run_venv() -> None:
     venv_path: str = sys.prefix
@@ -21,6 +23,7 @@ def run_venv() -> None:
     print("Safe to install packages without affecting the global system.\n")
 
     print(f"Package installation path: {site_pack_folder}")
+
 
 def run_no_venv() -> None:
     print("MATRIX STATUS: You're still plugged in\n")
@@ -42,6 +45,7 @@ def main() -> None:
         run_venv()
     else:
         run_no_venv()
+
 
 if __name__ == "__main__":
     main()
